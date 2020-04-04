@@ -1,5 +1,5 @@
 from Code import main
-
+#CW : Clockwise & CC : Counter Clockwise
 X_rotate_CW = {
     'U': 'F',
     'B': 'U',
@@ -51,7 +51,6 @@ def _invert(mv):
 
 
 def repeat_optimize(mv):
-    """ R, R, R --> Ri """
     change = False
     i = 0
     while i < len(mv) - 2:
@@ -65,7 +64,6 @@ def repeat_optimize(mv):
 
 
 def undo_optimize(mv):
-    """ R Ri --> <nothing>, R R Ri Ri --> <nothing> """
     change = False
     i = 0
     while i < len(mv) - 1:
@@ -136,9 +134,9 @@ if __name__ == '__main__':
     opt = opt_mv(mv)
     print("{len(opt)} Moves: {' '.join(opt)}")
 
-    orig = cube.Cube_Solve("OOOOOOOOOYYYWWWGGGBBBYYYWWWGGGBBBYYYWWWGGGBBBRRRRRRRRR")
-    c= cube.Cube_Solve(orig)
-    d=cube.Cube_Solve(orig)
+    orig = main.Cube_Solve("OOOOOOOOOYYYWWWGGGBBBYYYWWWGGGBBBYYYWWWGGGBBBRRRRRRRRR")
+    c= main.Cube_Solve(orig)
+    d=main.Cube_Solve(orig)
 
     c.seq(" ".join(mv))
     d.seq(" ".join(opt))
