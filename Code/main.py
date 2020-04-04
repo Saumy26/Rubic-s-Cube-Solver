@@ -16,26 +16,26 @@ CORNER = 'corner'
 
 
 # XY plane. CW:clockwise, CC:counter-clockwise.
-rotate_XY_CW = rubik.maths.Matrix(0, 1, 0,
+rotate_XY_CW = Code.maths.Matrix(0, 1, 0,
                                   -1, 0, 0,
                                   0, 0, 1)
-rotate_XY_CC = rubik.maths.Matrix(0, -1, 0,
+rotate_XY_CC = Code.maths.Matrix(0, -1, 0,
                                   1, 0, 0,
                                   0, 0, 1)
 
 # XZ plane 
-rotate_XZ_CW = rubik.maths.Matrix(0, 0, -1,
+rotate_XZ_CW = Code.maths.Matrix(0, 0, -1,
                                   0, 1, 0,
                                   1, 0, 0)
-rotate_XZ_CC = rubik.maths.Matrix(0, 0, 1,
+rotate_XZ_CC = Code.maths.Matrix(0, 0, 1,
                                   0, 1, 0,
                                   -1, 0, 0)
 
 # YZ plane
-rotate_YZ_CW = rubik.maths.Matrix(1, 0, 0,
+rotate_YZ_CW = Code.maths.Matrix(1, 0, 0,
                                   0, 0, 1,
                                   0, -1, 0)
-rotate_YZ_CC = rubik.maths.Matrix(1, 0, 0,
+rotate_YZ_CC = Code.maths.Matrix(1, 0, 0,
                                   0, 0, -1,
                                   0, 1, 0)
 
